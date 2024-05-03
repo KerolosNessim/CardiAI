@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <!-- <div class="layer vh-100 d-flex justify-content-center align-items-center">
+      <img src="./images/logo.png" alt="logo" class="w-25">
+    </div> -->
+    <!--! The Start of Main Section -->
+    <div class="main container py-5">
+      <div class="mainContainer p-5 bg-white  m-auto rounded-4">
+        <div class="item">
+          <img src="./images/logo.png" alt="logo" class="d-block m-auto" />
+        </div>
+        <h1 class="fw-bold text-center">CardiAI</h1>
+        <form class="mt-4">
+          <div class="row gy-3">
+            <div class="col-md-8">
+              <input id="age" type="number" class="form-control" placeholder="Age" />
+              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+            </div>
+            <div class="col-md-4">
+              <select
+                id="sex"
+                class="form-select"
+                aria-label="Default select example"
+                aria-placeholder="sex"
+              >
+                <option value="" selected disabled>Sex</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-12">
+              <select id="chistPainType" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>Chest Pain Type</option>
+                <option value="typical angina">typical angina</option>
+                <option value="atypical angina">atypical angina </option>
+                <option value="non-anginal pain">non-anginal pain </option>
+                <option value="asymptomatic">asymptomatic </option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-4">
+              <input
+              id="restingBp"
+                type="number"
+                class="form-control"
+                placeholder="Resting bp s "
+              />
+              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+            </div>
+            <div class="col-md-8">
+              <input
+              id="Cholesterol"
+                type="number"
+                class="form-control"
+                placeholder="Cholesterol  "
+              />
+              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+            </div>
+            <div class="col-md-3">
+              <select id="fastingBloodSuger" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>Fasting Blood Sugar</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-9">
+              <select id="restingEcg" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>Resting ecg</option>
+                <option value="normal">Normal</option>
+                <option value="having ST-T wave abnormality"
+                  >Having ST-T wave abnormality</option
+                >
+                <option value="Showing possible hypertrophy">
+                  Showing possible hypertrophy</option
+                >
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-9">
+              <input
+              id="maxHeartRate"
+                type="number"
+                class="form-control"
+                placeholder="Max Heart Rate "
+              />
+              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+            </div>
+            <div class="col-md-3">
+              <select id="exerciseAngina" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>Exercise Angina </option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-6">
+              <select id="stSlope" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>ST Slope </option>
+                <option value="upsloping">upsloping</option>
+                <option value="flat">flat </option>
+                <option value="downsloping">downsloping"</option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-6">
+              <select id="oldPeak" class="form-select" aria-label="Default select example">
+                <option value="" selected disabled>Oldpeak</option>
+                <option value="1">Upsloping</option>
+                <option value="0">Flat </option>
+              </select>
+              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+          </div>
+          <button id="checkBtn" class="btn mt-3 py-2 px-4 d-block ms-auto">Check <i class="fa-solid fa-circle-check"></i></button>
+        </form>
+        <p class="text-center  pt-4">© 2024 by 0xC1W0N$. All rights reserved.</p>
+      </div>
+    </div>
+    <!--! The End of Main Section -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

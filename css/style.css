@@ -1,0 +1,58 @@
+/* ^ general styles */
+:root{
+    --main:#001c32;
+}
+body{
+    background: rgb(0,60,108);
+    background: radial-gradient(circle, rgba(0,60,108,1) 0%, rgba(0,28,50,1) 100%);
+    color: var(--main);
+}
+/* ^ general styles */
+/** loader styles */
+.layer{
+    background-color: var(--main);
+}
+.layer img{
+    filter: drop-shadow(2px 2px 20px rgba(255, 255, 255, 0.3));
+    transform: rotate(0deg);
+    animation: loader 2s infinite;
+}
+@keyframes loader {
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+    
+}
+/** loader styles */
+/* & main styles */
+.main .mainContainer{
+width: 75%;
+}
+.main h1{
+    font-size: 4rem;
+
+}
+.main img{
+    width: 100px;
+}
+.main form input,.main form select{
+    border: var(--main) 1px solid;
+}
+.main form .btn{
+    background-color: var(--main);
+    color: white;
+    border: 1px solid var(--main);
+    transition:all .3s ;
+}
+.main form .btn:hover{
+    color: var(--main);
+    background-color: transparent;
+    border: 1px solid var(--main);
+}
+.main p{
+    font-size: 12px;
+}
+/* & main styles */

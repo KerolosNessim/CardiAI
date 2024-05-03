@@ -1,0 +1,14 @@
+@media screen and (max-width:767px) {
+    .main .mainContainer{
+        width: 100%;
+    }
+    .main h1{
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    .main img{
+        width: 90px;
+
+    }
+    
+}
