@@ -7,10 +7,27 @@ body{
     background: radial-gradient(circle, rgba(0,60,108,1) 0%, rgba(0,28,50,1) 100%);
     color: var(--main);
 }
+a{
+    color: var(--main);
+    font-weight: 700;
+}
+a:hover{
+text-decoration: none;
+}
 /* ^ general styles */
 /** loader styles */
 .layer{
     background-color: var(--main);
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.layer h2{
+    font-size: 4rem;
+    margin-top: .5rem;
 }
 .layer img{
     filter: drop-shadow(2px 2px 20px rgba(255, 255, 255, 0.3));
@@ -56,3 +73,14 @@ width: 75%;
     font-size: 12px;
 }
 /* & main styles */
+/* ^ message start */
+.message{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.708);
+    z-index: 99999;
+}
+/* ^ message end */

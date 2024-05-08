@@ -11,71 +11,176 @@ let exerciseAngina = document.getElementById('exerciseAngina');
 let stSlope = document.getElementById('stSlope');
 let oldPeak = document.getElementById('oldPeak');
 let checkBtn = document.getElementById('checkBtn');
-let selects = document.querySelectorAll('select');
-let inputs = document.querySelectorAll('input');
-let ageAlert = document.getElementById('ageAlert');
-
-// * function of inputsValidation
-function inputsValidation() {
-    inputs.forEach((input) => {
-        if (input.value === "") {
-            input.classList.add("is-invalid");
-            input.classList.remove("is-valid");
-            input.nextElementSibling.classList.replace("d-none", "d-block");
-            return false;
-        } else {
-            input.classList.add("is-valid");
-            input.nextElementSibling.classList.replace("d-block", "d-none");
-            return true;
-        }
-    })
-}
-// *function of selectValidation
-function validateAllSelects() {
-    selects.forEach((select) => {
-    if (select.value === "") {
-        select.classList.add("is-invalid");
-        select.classList.remove("is-valid");
-        select.nextElementSibling.classList.replace("d-none", "d-block");
+//^ loading function 
+let loading = setTimeout(
+    function () {
+$('.layer').fadeOut(2000);
+        
+    },3000)
+//& functions of Validation
+function ageValidation() {
+    if (age.value === "") {
+        age.nextElementSibling.classList.replace("d-none", "d-block");
         return false;
     } else {
-        select.classList.remove("is-invalid");
-        select.classList.add("is-valid");
-        select.nextElementSibling.classList.replace("d-block", "d-none");
+        age.nextElementSibling.classList.replace("d-block", "d-none");
         return true;
     }
-});
+    
 }
+function restingBpValidation() {
+    if (restingBp.value === "") {
+        restingBp.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        restingBp.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function CholesterolValidation() {
+    if (Cholesterol.value === "") {
+        Cholesterol.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        Cholesterol.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function maxHeartRateValidation() {
+    if (maxHeartRate.value === "") {
+        maxHeartRate.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        maxHeartRate.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function oldPeakValidation() {
+    if (oldPeak.value === "") {
+        oldPeak.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        oldPeak.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function sexValidation() {
+    if (sex.value === "") {
+        sex.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        sex.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function chistPainTypeValidation() {
+    if (chistPainType.value === "") {
+        chistPainType.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        chistPainType.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function fastingBloodSugerValidation() {
+    if (fastingBloodSuger.value === "") {
+        fastingBloodSuger.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        fastingBloodSuger.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function restingEcgValidation() {
+    if (restingEcg.value === "") {
+        restingEcg.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        restingEcg.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function exerciseAnginaValidation() {
+    if (exerciseAngina.value === "") {
+        exerciseAngina.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        exerciseAngina.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+function stSlopeValidation() {
+    if (stSlope.value === "") {
+        stSlope.nextElementSibling.classList.replace("d-none", "d-block");
+        return false;
+    } else {
+        stSlope.nextElementSibling.classList.replace("d-block", "d-none");
+        return true;
+    }
+    
+}
+
 //* function call api
-async function postData() {
-    let res = await fetch('https://karimhesham23.pythonanywhere.com/predict',
+
+async function postData(arr) {
+    let res = await fetch('https://karimhesham.app.modelbit.com/v1/endpoint/predict',
         {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-        body:[
-    {
-        "age": 45,
-        "sex": "female",
-        "chest pain type": "atypical angina",
-        "resting bp s": 130,
-        "cholesterol": 237,
-        "fasting blood sugar": "No",
-        "resting ecg": "normal",
-        "max heart rate":170,
-        "exercise angina": "No",
-        "oldpeak":0,
-        "ST slope": "upsloping"
-    }
-        ],
+            body:JSON.stringify({"data":arr}),
     })
     let data = await res.json();
-    console.log(data);
+    let final = data.data[0];
+    console.log(final);
+    displayResult(final);
 }
 
-
+// & api operation
 checkBtn.addEventListener("click", function (e) {
     e.preventDefault();
+    if (ageValidation() &&restingBpValidation()&&CholesterolValidation()&&maxHeartRateValidation()&&oldPeakValidation()&&sexValidation()&&chistPainTypeValidation()&& fastingBloodSugerValidation()&&restingEcgValidation()&&exerciseAnginaValidation()&&stSlopeValidation()) {
+        let arr = [age.value, sex.value, chistPainType.value, restingBp.value, Cholesterol.value, fastingBloodSuger.value, restingEcg.value, maxHeartRate.value, exerciseAngina.value, oldPeak.value, stSlope.value];
+        postData(arr);
+    } else {
+        ageValidation();
+        restingBpValidation();
+        CholesterolValidation();
+        maxHeartRateValidation();
+        oldPeakValidation();
+        sexValidation();
+        chistPainTypeValidation();
+        fastingBloodSugerValidation();
+        restingEcgValidation();
+        exerciseAnginaValidation();
+        stSlopeValidation();
+    }
 })
-postData();
+// ! close lightBox
+document.addEventListener("click", function (e) {
+    if (e.target.id === "message") {
+        document.getElementById("message").classList.replace("d-flex","d-none")
+    }
+});
+// & display result
+function displayResult(res) {
+    if (res == 1) {
+        document.getElementById("message").classList.replace("d-none", "d-flex");
+        document.getElementById("messageRed").classList.replace("d-none", "d-block");
+        document.getElementById("messageInfo").classList.replace("d-block", "d-none");
+    } else{
+        document.getElementById("message").classList.replace("d-none", "d-flex");
+        document.getElementById("messageInfo").classList.replace("d-none", "d-block");
+        document.getElementById("messageRed").classList.replace("d-block", "d-none");
+    }
+}

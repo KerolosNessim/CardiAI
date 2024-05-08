@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://karimhesham.app.modelbit.com">
+    <title>CardiAI</title>
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -11,9 +12,10 @@
     <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
-    <!-- <div class="layer vh-100 d-flex justify-content-center align-items-center">
-      <img src="./images/logo.png" alt="logo" class="w-25">
-    </div> -->
+    <div class="layer overflow-hidden">
+      <img src="./images/logo.png" alt="logo" class="w-25 ">
+      <h2 class="fw-bold text-center text-white ">CardiAI</h2>
+    </div>
     <!--! The Start of Main Section -->
     <div class="main container py-5">
       <div class="mainContainer p-5 bg-white  m-auto rounded-4">
@@ -72,7 +74,7 @@
               <select id="fastingBloodSuger" class="form-select" aria-label="Default select example">
                 <option value="" selected disabled>Fasting Blood Sugar</option>
                 <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="No">No</option>
               </select>
               <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
             </div>
@@ -80,12 +82,8 @@
               <select id="restingEcg" class="form-select" aria-label="Default select example">
                 <option value="" selected disabled>Resting ecg</option>
                 <option value="normal">Normal</option>
-                <option value="having ST-T wave abnormality"
-                  >Having ST-T wave abnormality</option
-                >
-                <option value="Showing possible hypertrophy">
-                  Showing possible hypertrophy</option
-                >
+                <option value="having ST-T wave abnormality">Having ST-T wave abnormality</option>
+                <option value="Showing possible hypertrophy">Showing possible hypertrophy</option>
               </select>
               <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
             </div>
@@ -101,35 +99,50 @@
             <div class="col-md-3">
               <select id="exerciseAngina" class="form-select" aria-label="Default select example">
                 <option value="" selected disabled>Exercise Angina </option>
-                <option value="Yes">Yes</option>
+                <option value="yes">Yes</option>
                 <option value="No">No</option>
               </select>
               <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="oldPeak"
+                type="number"
+                class="form-control"
+                placeholder="OldPeak"
+              />
+              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
             </div>
             <div class="col-md-6">
               <select id="stSlope" class="form-select" aria-label="Default select example">
                 <option value="" selected disabled>ST Slope </option>
                 <option value="upsloping">upsloping</option>
                 <option value="flat">flat </option>
-                <option value="downsloping">downsloping"</option>
+                <option value="downsloping">downsloping</option>
               </select>
               <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
             </div>
-            <div class="col-md-6">
-              <select id="oldPeak" class="form-select" aria-label="Default select example">
-                <option value="" selected disabled>Oldpeak</option>
-                <option value="1">Upsloping</option>
-                <option value="0">Flat </option>
-              </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
-            </div>
+
           </div>
           <button id="checkBtn" class="btn mt-3 py-2 px-4 d-block ms-auto">Check <i class="fa-solid fa-circle-check"></i></button>
         </form>
-        <p class="text-center  pt-4">© 2024 by 0xC1W0N$. All rights reserved.</p>
+        <p class="text-center  pt-4">© 2024 by 0xC1W0N$. All rights reserved. <a href="./pages/Statestics.html" target="_blank" rel="noopener noreferrer">Show Statistics</a></p>
       </div>
     </div>
     <!--! The End of Main Section -->
+    <!--! The Start of Message Section -->
+    <div id="message" class="message d-none align-items-center justify-content-center">
+      <div id="messageRed" class="d-none bg-danger w-50 text-white text-center p-5 rounded-3 ">
+        <h3 class="h1 fw-bold my-3">Heart Patient</h3>
+        <p>Your well-being is our priority. CardiAI suggests there may be indicators of a heart condition. Following up with a medical professional for a detailed assessment is important. Taking action now can make all the difference.</p>
+      </div>
+      <div id="messageInfo" class="d-none bg-info w-50 text-white text-center p-5 rounded-3 ">
+        <h3 class="h1 fw-bold my-3">No Heart Disease</h3>
+        <p>Great news! Based on the information provided, it seems like you're not at immediate risk of heart disease. However, it's still essential to maintain a healthy lifestyle, including regular exercise, balanced nutrition, and routine check-ups, to keep your heart in top shape. Keep up the good work, and remember that prevention is key to a long and healthy life!</p>
+      </div>
+    </div>
+    <!--! The End of Message Section -->
+
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.js"></script>
