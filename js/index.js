@@ -13,7 +13,9 @@ let oldPeak = document.getElementById("oldPeak");
 let checkBtn = document.getElementById("checkBtn");
 //^ loading function
 let loading = setTimeout(function () {
-  $(".layer").fadeOut(2000);
+  $(".layer").fadeOut(2000, function () {
+    $('body').css({ overflow: 'auto' });
+  });
 }, 3000);
 //& functions of Validation
 function ageValidation() {

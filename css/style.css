@@ -10,6 +10,7 @@ body {
     rgba(0, 28, 50, 1) 100%
   );
   color: var(--main);
+  overflow: hidden;
 }
 
 a {
