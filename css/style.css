@@ -1,86 +1,113 @@
 /* ^ general styles */
-:root{
-    --main:#001c32;
+:root {
+  --main: #001c32;
 }
-body{
-    background: rgb(0,60,108);
-    background: radial-gradient(circle, rgba(0,60,108,1) 0%, rgba(0,28,50,1) 100%);
-    color: var(--main);
+body {
+  background: rgb(0, 60, 108);
+  background: radial-gradient(
+    circle,
+    rgba(0, 60, 108, 1) 0%,
+    rgba(0, 28, 50, 1) 100%
+  );
+  color: var(--main);
 }
-a{
-    color: var(--main);
-    font-weight: 700;
+
+a {
+  color: var(--main);
+  font-weight: 700;
 }
-a:hover{
-text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
 /* ^ general styles */
+/* ? modal styles */
+.modalBox i{
+  color: var(--main);
+}
+.modalBox .closeBtn{
+  font-weight: 500;
+  background-color: var(--main);
+  color: white;
+  border: 2px solid var(--main);
+  transition: all 0.3s;
+}
+.modalBox .closeBtn:hover{
+  background-color: white;
+  color: var(--main);
+  border-color: var(--main);
+}
+
+/* ? modal styles */
 /** loader styles */
-.layer{
-    background-color: var(--main);
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.layer {
+  background-color: var(--main);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.layer h2{
-    font-size: 4rem;
-    margin-top: .5rem;
+.layer h2 {
+  font-size: 4rem;
+  margin-top: 0.5rem;
 }
-.layer img{
-    filter: drop-shadow(2px 2px 20px rgba(255, 255, 255, 0.3));
-    transform: rotate(0deg);
-    animation: loader 2s infinite;
+.layer img {
+  width: 15%;
+  filter: drop-shadow(2px 2px 20px rgba(255, 255, 255, 0.3));
+  transform: rotate(0deg);
+  animation: loader 2s infinite;
 }
 @keyframes loader {
-    0%{
+  0% {
     transform: rotate(0deg);
-    }
-    100%{
+  }
+  100% {
     transform: rotate(360deg);
-    }
-    
+  }
 }
 /** loader styles */
 /* & main styles */
-.main .mainContainer{
-width: 75%;
+.main .mainContainer {
+  width: 75%;
 }
-.main h1{
-    font-size: 4rem;
-
+.main h1 {
+  font-size: 4rem;
 }
-.main img{
-    width: 100px;
+.main img {
+  width: 100px;
 }
-.main form input,.main form select{
-    border: var(--main) 1px solid;
+.main form input,
+.main form select {
+  border: var(--main) 1px solid;
 }
-.main form .btn{
-    background-color: var(--main);
-    color: white;
-    border: 1px solid var(--main);
-    transition:all .3s ;
+.main form .btn {
+  background-color: var(--main);
+  color: white;
+  border: 1px solid var(--main);
+  transition: all 0.3s;
 }
-.main form .btn:hover{
-    color: var(--main);
-    background-color: transparent;
-    border: 1px solid var(--main);
+.main form .btn:hover {
+  color: var(--main);
+  background-color: transparent;
+  border: 1px solid var(--main);
 }
-.main p{
-    font-size: 12px;
+.main p {
+  font-size: 12px;
 }
 /* & main styles */
 /* ^ message start */
-.message{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.708);
-    z-index: 99999;
+.message {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.708);
+  z-index: 99999;
+}
+#messageRed,
+#messageInfo {
+  width: 50%;
 }
 /* ^ message end */

@@ -1,18 +1,22 @@
-@media screen and (max-width:767px) {
-    .layer h2{
-        font-size: 2.5rem;
-        ma
-    }
-    .main .mainContainer{
-        width: 100%;
-    }
-    .main h1{
-        font-size: 2rem;
-        margin-left: 20px;
-    }
-    .main img{
-        width: 90px;
-
-    }
-    
+@media screen and (max-width: 767px) {
+  .layer h2 {
+    font-size: 2.5rem;
+  }
+  .layer img {
+    width: 30%;
+  }
+  #messageRed,
+  #messageInfo {
+    width: 90%;
+  }
+  .main .mainContainer {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+  .main img {
+    width: 90px;
+  }
 }

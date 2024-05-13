@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://karimhesham.app.modelbit.com">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="connect-src 'self' https://karimhesham.app.modelbit.com"
+    />
     <title>CardiAI</title>
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/all.min.css" />
@@ -13,21 +16,179 @@
   </head>
   <body>
     <div class="layer overflow-hidden">
-      <img src="./images/logo.png" alt="logo" class="w-25 ">
-      <h2 class="fw-bold text-center text-white ">CardiAI</h2>
+      <img src="./images/logo.png" alt="logo" />
+      <h2 class="fw-bold text-center text-white">CardiAI</h2>
+      <p class="text-white fs-3">Your Heart’s Guardian Angel</p>
     </div>
     <!--! The Start of Main Section -->
     <div class="main container py-5">
-      <div class="mainContainer p-5 bg-white  m-auto rounded-4">
-        <div class="item">
-          <img src="./images/logo.png" alt="logo" class="d-block m-auto" />
+      <div class="mainContainer p-5 bg-white m-auto rounded-4 ">
+        <div class="modalBox">
+<!--! Button trigger modal -->
+        <button
+          type="button"
+          class="modalBtn btn d-block ms-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="fa-2xl fa-solid fa-circle-info"></i>
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  help 
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Age
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Age of person</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Sex
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Gender of Patient (Male or Female)</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Chest Pain Type
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Different types of chest pain 
+        <ul class="list-unstyled">
+          <li><span class="fw-bold">Typical Angina :</span> Chest pain or discomfort caused by reduced blood flow to the heart muscle</li>
+          <li><span class="fw-bold">Atypical Angina :</span> Chest discomfort similar to angina but with different symptoms or triggers</li>
+          <li><span class="fw-bold">Non-anginal Pain :</span> Chest discomfort or pain not caused by reduced blood flow to the heart</li>
+          <li><span class="fw-bold">Asymptomatic :</span> Without chest pain symptoms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        Fasting Blood Sugar
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        The level of glucose (sugar) in the bloodstream after a period of fasting
+        <ul class="list-unstyled">
+          <li><span class="fw-bold">YES :</span>  fasting blood sugar &gt; 120 mg/dl</li>
+          <li><span class="fw-bold">No :</span>  fasting blood sugar &lt; 120 mg/dl</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        Resting electrocardiogram results (ECG)
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="list-unstyled">
+        Results of the Resting electrocardiogram (ECG)
+          <li><span class="fw-bold">Normal :</span> No significant abnormalities in heart function.</li>
+          <li><span class="fw-bold">ST-T wave abnormality :</span> deviations in the ST-T wave segment</li>
+          <li><span class="fw-bold">left ventricular hypertrophy :</span> thickening of the left ventricle wall</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        Exercise induced angina
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Indicates whether chest pain is experienced during physical exerion or exercise</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+        OldPeak
+      </button>
+    </h2>
+    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">The magnitude of ST depression observed on an electrocardiogram (ECG) during exercise stress testing</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+        the slope of the peak exercise ST segment
+      </button>
+    </h2>
+    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Describes the direction and pattern of change in the ST segment during peak exercise
+      </div>
+    </div>
+  </div>
+</div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn closeBtn"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <h1 class="fw-bold text-center">CardiAI</h1>
+        </div>
+        <div class="item">
+          <img src="./images/logo.png" alt="logo" class="d-block m-auto " />
+        </div>
+        <h2 class="h1 fw-bold text-center">CardiAI</h2>
         <form class="mt-4">
           <div class="row gy-3">
             <div class="col-md-8">
-              <input id="age" type="number" class="form-control" placeholder="Age" />
-              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+              <input
+                id="age"
+                type="number"
+                class="form-control"
+                placeholder="Age"
+              />
+              <div class="alert alert-danger my-3 d-none text-center">
+                "This Field Is Requred"
+              </div>
             </div>
             <div class="col-md-4">
               <select
@@ -40,69 +201,115 @@
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
             <div class="col-md-12">
-              <select id="chistPainType" class="form-select" aria-label="Default select example">
+              <select
+                id="chistPainType"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option value="" selected disabled>Chest Pain Type</option>
                 <option value="typical angina">typical angina</option>
                 <option value="atypical angina">atypical angina </option>
                 <option value="non-anginal pain">non-anginal pain </option>
                 <option value="asymptomatic">asymptomatic </option>
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
             <div class="col-md-4">
               <input
-              id="restingBp"
+                id="restingBp"
                 type="number"
                 class="form-control"
                 placeholder="Resting bp s "
               />
-              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+              <div class="alert alert-danger my-3 d-none text-center">
+                "This Field Is Requred"
+              </div>
             </div>
             <div class="col-md-8">
               <input
-              id="Cholesterol"
+                id="Cholesterol"
                 type="number"
                 class="form-control"
                 placeholder="Cholesterol  "
               />
-              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+              <div class="alert alert-danger my-3 d-none text-center">
+                "This Field Is Requred"
+              </div>
             </div>
             <div class="col-md-3">
-              <select id="fastingBloodSuger" class="form-select" aria-label="Default select example">
+              <select
+                id="fastingBloodSuger"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option value="" selected disabled>Fasting Blood Sugar</option>
                 <option value="yes">Yes</option>
                 <option value="No">No</option>
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
             <div class="col-md-9">
-              <select id="restingEcg" class="form-select" aria-label="Default select example">
+              <select
+                id="restingEcg"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option value="" selected disabled>Resting ecg</option>
                 <option value="normal">Normal</option>
-                <option value="having ST-T wave abnormality">Having ST-T wave abnormality</option>
-                <option value="Showing possible hypertrophy">Showing possible hypertrophy</option>
+                <option value="having ST-T wave abnormality"
+                  >Having ST-T wave abnormality</option
+                >
+                <option value="Showing possible hypertrophy"
+                  >Showing possible hypertrophy</option
+                >
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
             <div class="col-md-9">
               <input
-              id="maxHeartRate"
+                id="maxHeartRate"
                 type="number"
                 class="form-control"
                 placeholder="Max Heart Rate "
               />
-              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+              <div class="alert alert-danger my-3 d-none text-center">
+                "This Field Is Requred"
+              </div>
             </div>
             <div class="col-md-3">
-              <select id="exerciseAngina" class="form-select" aria-label="Default select example">
+              <select
+                id="exerciseAngina"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option value="" selected disabled>Exercise Angina </option>
                 <option value="yes">Yes</option>
                 <option value="No">No</option>
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
             <div class="col-md-6">
               <input
@@ -111,34 +318,74 @@
                 class="form-control"
                 placeholder="OldPeak"
               />
-              <div class="alert alert-danger my-3 d-none text-center">"This Field Is Requred"</div>
+              <div class="alert alert-danger my-3 d-none text-center">
+                "This Field Is Requred"
+              </div>
             </div>
             <div class="col-md-6">
-              <select id="stSlope" class="form-select" aria-label="Default select example">
+              <select
+                id="stSlope"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option value="" selected disabled>ST Slope </option>
                 <option value="upsloping">upsloping</option>
                 <option value="flat">flat </option>
                 <option value="downsloping">downsloping</option>
               </select>
-              <div class="selectAlert alert alert-danger my-3 d-none text-center">"Should selected"</div>
+              <div
+                class="selectAlert alert alert-danger my-3 d-none text-center"
+              >
+                "Should selected"
+              </div>
             </div>
-
           </div>
-          <button id="checkBtn" class="btn mt-3 py-2 px-4 d-block ms-auto">Check <i class="fa-solid fa-circle-check"></i></button>
+          <button id="checkBtn" class="btn mt-3 py-2 px-4 d-block ms-auto">
+            Check <i class="fa-solid fa-circle-check"></i>
+          </button>
         </form>
-        <p class="text-center  pt-4">© 2024 by 0xC1W0N$. All rights reserved. <a href="./pages/Statestics.html" target="_blank" rel="noopener noreferrer">Show Statistics</a></p>
+        <p class="text-center pt-4">
+          © 2024 by 0xC1W0N$. All rights reserved.
+          <a
+            href="./pages/Statestics.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Show Statistics</a
+          >
+        </p>
       </div>
     </div>
     <!--! The End of Main Section -->
     <!--! The Start of Message Section -->
-    <div id="message" class="message d-none align-items-center justify-content-center">
-      <div id="messageRed" class="d-none bg-danger w-50 text-white text-center p-5 rounded-3 ">
+    <div
+      id="message"
+      class="message d-none align-items-center justify-content-center"
+    >
+      <div
+        id="messageRed"
+        class="d-none bg-danger text-white text-center p-4 rounded-3"
+      >
         <h3 class="h1 fw-bold my-3">Heart Patient</h3>
-        <p>Your well-being is our priority. CardiAI suggests there may be indicators of a heart condition. Following up with a medical professional for a detailed assessment is important. Taking action now can make all the difference.</p>
+        <p>
+          Your well-being is our priority. CardiAI suggests there may be
+          indicators of a heart condition. Following up with a medical
+          professional for a detailed assessment is important. Taking action now
+          can make all the difference.
+        </p>
       </div>
-      <div id="messageInfo" class="d-none bg-info w-50 text-white text-center p-5 rounded-3 ">
+      <div
+        id="messageInfo"
+        class="d-none bg-info text-white text-center p-4 rounded-3"
+      >
         <h3 class="h1 fw-bold my-3">No Heart Disease</h3>
-        <p>Great news! Based on the information provided, it seems like you're not at immediate risk of heart disease. However, it's still essential to maintain a healthy lifestyle, including regular exercise, balanced nutrition, and routine check-ups, to keep your heart in top shape. Keep up the good work, and remember that prevention is key to a long and healthy life!</p>
+        <p>
+          Great news! Based on the information provided, it seems like you're
+          not at immediate risk of heart disease. However, it's still essential
+          to maintain a healthy lifestyle, including regular exercise, balanced
+          nutrition, and routine check-ups, to keep your heart in top shape.
+          Keep up the good work, and remember that prevention is key to a long
+          and healthy life!
+        </p>
       </div>
     </div>
     <!--! The End of Message Section -->
