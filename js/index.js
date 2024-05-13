@@ -165,6 +165,7 @@ checkBtn.addEventListener("click", function (e) {
       stSlope.value,
     ];
     postData(arr);
+    checkBtn.innerHTML=`Wating your result <i class="fa-solid fa-spinner fa-spin"></i>`
   } else {
     ageValidation();
     restingBpValidation();
@@ -195,6 +196,8 @@ function displayResult(res) {
     document
       .getElementById("messageInfo")
       .classList.replace("d-block", "d-none");
+    checkBtn.innerHTML=`Check <i class="fa-solid fa-circle-check"></i>`
+    
   } else {
     document.getElementById("message").classList.replace("d-none", "d-flex");
     document
@@ -203,5 +206,37 @@ function displayResult(res) {
     document
       .getElementById("messageRed")
       .classList.replace("d-block", "d-none");
+    checkBtn.innerHTML=`Check <i class="fa-solid fa-circle-check"></i>`
   }
 }
+// ? warining alerts
+age.addEventListener('mouseenter',function () {
+  document.getElementById('ageWarning').classList.replace('d-none', 'd-block');
+})
+age.addEventListener('mouseleave',function () {
+  document.getElementById('ageWarning').classList.replace('d-block', 'd-none');
+})
+restingBp.addEventListener('mouseenter',function () {
+  document.getElementById('restingWarning').classList.replace('d-none', 'd-block');
+})
+restingBp.addEventListener('mouseleave',function () {
+  document.getElementById('restingWarning').classList.replace('d-block', 'd-none');
+})
+Cholesterol.addEventListener('mouseenter',function () {
+  document.getElementById('cholesterolWarning').classList.replace('d-none', 'd-block');
+})
+Cholesterol.addEventListener('mouseleave',function () {
+  document.getElementById('cholesterolWarning').classList.replace('d-block', 'd-none');
+})
+maxHeartRate.addEventListener('mouseenter',function () {
+  document.getElementById('maxHeartWarning').classList.replace('d-none', 'd-block');
+})
+maxHeartRate.addEventListener('mouseleave',function () {
+  document.getElementById('maxHeartWarning').classList.replace('d-block', 'd-none');
+})
+oldPeak.addEventListener('mouseenter',function () {
+  document.getElementById('oldPeakWarning').classList.replace('d-none', 'd-block');
+})
+oldPeak.addEventListener('mouseleave',function () {
+  document.getElementById('oldPeakWarning').classList.replace('d-block', 'd-none');
+})

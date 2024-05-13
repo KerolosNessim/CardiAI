@@ -22,7 +22,7 @@
     </div>
     <!--! The Start of Main Section -->
     <div class="main container py-5">
-      <div class="mainContainer p-5 bg-white m-auto rounded-4 ">
+      <div class="mainContainer  p-3 bg-white m-auto rounded-4 ">
         <div class="modalBox">
 <!--! Button trigger modal -->
         <button
@@ -189,6 +189,10 @@
               <div class="alert alert-danger my-3 d-none text-center">
                 "This Field Is Requred"
               </div>
+              <div class="alert alert-warning my-3 d-none" id="ageWarning">
+                <i class="fa-solid fa-triangle-exclamation"></i> To get the most accurate results
+                It is preferable that the reading range range from 20 to 80 
+              </div>
             </div>
             <div class="col-md-4">
               <select
@@ -235,6 +239,10 @@
               <div class="alert alert-danger my-3 d-none text-center">
                 "This Field Is Requred"
               </div>
+              <div class="alert alert-warning my-3 d-none" id="restingWarning">
+                <i class="fa-solid fa-triangle-exclamation"></i> To get the most accurate results
+                It is preferable that the reading range range from 80 to 200 
+              </div>
             </div>
             <div class="col-md-8">
               <input
@@ -245,6 +253,10 @@
               />
               <div class="alert alert-danger my-3 d-none text-center">
                 "This Field Is Requred"
+              </div>
+              <div class="alert alert-warning my-3 d-none" id="cholesterolWarning">
+                <i class="fa-solid fa-triangle-exclamation"></i> To get the most accurate results
+                It is preferable that the reading range range from 100 to 400 
               </div>
             </div>
             <div class="col-md-3">
@@ -294,6 +306,10 @@
               <div class="alert alert-danger my-3 d-none text-center">
                 "This Field Is Requred"
               </div>
+              <div class="alert alert-warning my-3 d-none" id="maxHeartWarning">
+                <i class="fa-solid fa-triangle-exclamation"></i> To get the most accurate results
+                It is preferable that the reading range range from 60 to 220 
+              </div>
             </div>
             <div class="col-md-3">
               <select
@@ -320,6 +336,10 @@
               />
               <div class="alert alert-danger my-3 d-none text-center">
                 "This Field Is Requred"
+              </div>
+              <div class="alert alert-warning my-3 d-none" id="oldPeakWarning">
+                <i class="fa-solid fa-triangle-exclamation"></i> To get the most accurate results
+                It is preferable that the reading range range from -3 to 5 
               </div>
             </div>
             <div class="col-md-6">
@@ -389,7 +409,6 @@
       </div>
     </div>
     <!--! The End of Message Section -->
-
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.js"></script>
